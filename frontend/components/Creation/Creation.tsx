@@ -17,8 +17,8 @@ export function Creation() {
   const [topic, setTopic] = useState("");
   const [numQuestions, setNumQuestions] = useState(2);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [videoUrl, setVideoUrl] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   const words = [
     { text: "Create" },
@@ -53,8 +53,8 @@ export function Creation() {
 
       if (response.ok) {
         const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
-        setVideoUrl(url);
+        const videoUrl = URL.createObjectURL(blob);
+        setVideoUrl(videoUrl);
       } else {
         const text = await response.text();
         throw new Error(`${response.status}: ${text}`);
@@ -138,3 +138,4 @@ export function Creation() {
     </div>
   );
 }
+export default Creation;

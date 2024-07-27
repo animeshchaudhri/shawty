@@ -10,7 +10,7 @@ export const Features = () => {
         <div className="max-w-xl mx-auto">
           <p className="text-center mt-5 text-xl text-white/70">
             Create engaging shorts reels with our intuitive tools. From prompt
-            to video generation, we've got you covered.
+            to video generation, we  got you covered.
           </p>
         </div>
         <div className="flex flex-col items-center justify-center sm:flex-row gap-4 mt-32">
