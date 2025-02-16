@@ -36,7 +36,7 @@ export function Creation() {
     setError(null);
     setVideoUrl(null);
 
-    const url = "http://127.0.0.1:5000/generate_quiz";
+    const url = "http://localhost:5000/generate_quiz";
     const payload = {
       topic: topic,
       num_questions: numQuestions,
